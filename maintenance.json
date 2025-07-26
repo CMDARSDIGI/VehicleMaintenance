@@ -1,0 +1,52 @@
+[
+  {
+    "vehicle_id": "JSW001",
+    "maintenance_type": "SCHEDULED",
+    "vehicle_in_date": "6/15/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Oil Change, Filter Replacement",
+    "vehicle_out_date": "6/15/2025",
+    "remarks": "Routine Service",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "JSW002",
+    "maintenance_type": "SCHEDULED",
+    "vehicle_in_date": "6/20/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Brake Inspection",
+    "vehicle_out_date": "6/20/2025",
+    "remarks": "Brake pads replaced",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "JSW003",
+    "maintenance_type": "SCHEDULED",
+    "vehicle_in_date": "6/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Battery Check",
+    "vehicle_out_date": "6/25/2025",
+    "remarks": "Battery replaced",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "JSW004",
+    "maintenance_type": "SCHEDULED",
+    "vehicle_in_date": "6/30/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "AC Service",
+    "vehicle_out_date": "6/30/2025",
+    "remarks": "AC filter cleaned",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "JSW005",
+    "maintenance_type": "SCHEDULED",
+    "vehicle_in_date": "7/05/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "General Checkup",
+    "vehicle_out_date": "7/05/2025",
+    "remarks": "All OK",
+    "final_status": "COMPLETED"
+  }
+]
