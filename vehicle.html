@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vehicle Details</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 40px; }
+    .container { background-color: #fff; padding: 30px; border-radius: 10px; max-width: 800px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #333; }
+    .vehicle { margin-top: 30px; }
+    .vehicle h2 { color: #007BFF; }
+    .vehicle dl { display: grid; grid-template-columns: max-content auto; row-gap: 10px; column-gap: 20px; }
+    .vehicle dt { font-weight: bold; color: #555; }
+    .vehicle dd { margin: 0; color: #333; }
+    .error { color: red; text-align: center; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Vehicle Details</h1>
+    <div id="vehicleDetails" class="vehicle"></div>
+    <div id="errorMsg" class="error"></div>
+  </div>
+  <script>
+    const regNumber = localStorage.getItem("searchRegNumber")?.trim().toUpperCase();
+    const vehicleId = localStorage.getItem("searchVehicleId")?.trim().toUpperCase();
+    fetch("vehicles.json")
+      .then(response => response.json())
+      .then(data => {
+        const vehicle = data.find(v =>
+          (vehicleId && v.vehicle_id.toUpperCase() === vehicleId) ||
+          (regNumber && v.registration_number.toUpperCase() === regNumber)
+        );
+        if (vehicle) {
+          const details = `
+            <h2>${vehicle.make} ${vehicle.model} (${vehicle.variant})</h2>
+            <dl>
+              <dt>Vehicle ID</dt><dd>${vehicle.vehicle_id}</dd>
+              <dt>Registration Number</dt><dd>${vehicle.registration_number}</dd>
+              <dt>Year of Manufacture</dt><dd>${vehicle.year}</dd>
+              <dt>Color</dt><dd>${vehicle.color}</dd>
+              <dt>Fuel Type</dt><dd>${vehicle.fuel_type}</dd>
+              <dt>Transmission Type</dt><dd>${vehicle.transmission}</dd>
+              <dt>Engine Capacity</dt><dd>${vehicle.engine_capacity}</dd>
+              <dt>Chassis Number</dt><dd>${vehicle.chassis_number}</dd>
+              <dt>VIN</dt><dd>${vehicle.vin}</dd>
+              <dt>Odometer Reading</dt><dd>${vehicle.odometer}</dd>
+              <dt>Purchase Date</dt><dd>${vehicle.purchase_date}</dd>
+              <dt>Purchase Price</dt><dd>${vehicle.purchase_price}</dd>
+              <dt>Owner / Assigned Driver</dt><dd>${vehicle.owner}</dd>
+              <dt>Insurance Provider & Policy Number</dt><dd>${vehicle.insurance}</dd>
+              <dt>Road Tax Validity</dt><dd>${vehicle.road_tax_validity}</dd>
+              <dt>Emission Norms</dt><dd>${vehicle.emission_norms}</dd>
+              <dt>RC Book / Smart Card Status</dt><dd>${vehicle.rc_status}</dd>
+            </dl>
+          `;
+          document.getElementById("vehicleDetails").innerHTML = details;
+        } else {
+          document.getElementById("errorMsg").textContent = "No matching vehicle found.";
+        }
+      })
+      .catch(error => {
+        document.getElementById("errorMsg").textContent = "Error loading vehicle data.";
+        console.error("Error:", error);
+      });
+  </script>
+</body>
+</html>

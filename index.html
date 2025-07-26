@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vehicle Lookup</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #eef2f3; padding: 40px; }
+    .container { background-color: #fff; padding: 30px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; color: #333; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input[type="text"], input[type="email"] { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+    .error { color: red; margin-top: 10px; }
+    button { margin-top: 20px; padding: 10px 15px; background-color: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Enter Vehicle Lookup Details</h2>
+    <form id="lookupForm" onsubmit="return validateForm()">
+      <label for="email">Email <span style="color:red">*</span></label>
+      <input type="email" id="email" name="email" required>
+      <label for="regNumber">Registration Number</label>
+      <input type="text" id="regNumber" name="regNumber">
+      <label for="vehicleId">Vehicle ID</label>
+      <input type="text" id="vehicleId" name="vehicleId">
+      <div class="error" id="errorMsg"></div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    function validateForm() {
+      const email = document.getElementById("email").value.trim();
+      const regNumber = document.getElementById("regNumber").value.trim();
+      const vehicleId = document.getElementById("vehicleId").value.trim();
+      const errorMsg = document.getElementById("errorMsg");
+      errorMsg.textContent = "";
+      if (!email) {
+        errorMsg.textContent = "Email is required.";
+        return false;
+      }
+      if (!email.endsWith("@jsw.in")) {
+        errorMsg.textContent = "Email must end with @jsw.in.";
+        return false;
+      }
+      if (!regNumber && !vehicleId) {
+        errorMsg.textContent = "Please enter either Registration Number or Vehicle ID.";
+        return false;
+      }
+      localStorage.setItem("searchEmail", email);
+      localStorage.setItem("searchRegNumber", regNumber);
+      localStorage.setItem("searchVehicleId", vehicleId);
+      window.location.href = "vehicle.html";
+      return false;
+    }
+  </script>
+</body>
+</html>
