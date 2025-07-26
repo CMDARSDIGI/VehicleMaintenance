@@ -4,56 +4,78 @@
   <meta charset="UTF-8">
   <title>Breakdown Records</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 40px; }
-    .container { background-color: #fff; padding: 30px; border-radius: 10px; max-width: 1000px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1 { text-align: center; color: #333; }
-    table { width: 100%; border-collapse: collapse; margin-top: 30px; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
-    th { background-color: #007BFF; color: white; }
-    tr:nth-child(even) { background-color: #f2f2f2; }
-    .error { color: red; text-align: center; margin-top: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-left: 5px solid #007BFF;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #007BFF;
+      font-size: 20px;
+    }
+    .card p {
+      margin: 5px 0;
+      color: #333;
+    }
+    .label {
+      font-weight: bold;
+      color: #555;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Breakdown Records</h1>
     <div id="errorMsg" class="error"></div>
-    <table id="breakdownTable">
-      <thead>
-        <tr>
-          <th>Vehicle ID</th>
-          <th>Maintenance Type</th>
-          <th>Vehicle In Date</th>
-          <th>Job Status</th>
-          <th>Issues Found</th>
-          <th>Vehicle Out Date</th>
-          <th>Remarks</th>
-          <th>Final Status</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <div id="cardContainer"></div>
   </div>
+
   <script>
     const vehicleId = localStorage.getItem("searchVehicleId")?.trim().toUpperCase();
+
     fetch("breakdown.json")
       .then(response => response.json())
       .then(data => {
         const filtered = data.filter(v => v.vehicle_id.toUpperCase() === vehicleId);
-        const tbody = document.querySelector("#breakdownTable tbody");
+        const container = document.getElementById("cardContainer");
+
         if (filtered.length > 0) {
           filtered.forEach(record => {
-            const row = `<tr>
-              <td>${record.vehicle_id}</td>
-              <td>${record.maintenance_type}</td>
-              <td>${record.vehicle_in_date}</td>
-              <td>${record.job_status}</td>
-              <td>${record.issues_found}</td>
-              <td>${record.vehicle_out_date}</td>
-              <td>${record.remarks}</td>
-              <td>${record.final_status}</td>
-            </tr>`;
-            tbody.innerHTML += row;
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+              <h2>Vehicle ID: ${record.vehicle_id}</h2>
+              <p><span class="label">Maintenance Type:</span> ${record.maintenance_type}</p>
+              <p><span class="label">Vehicle In Date:</span> ${record.vehicle_in_date}</p>
+              <p><span class="label">Job Status:</span> ${record.job_status}</p>
+              <p><span class="label">Issues Found:</span> ${record.issues_found}</p>
+              <p><span class="label">Vehicle Out Date:</span> ${record.vehicle_out_date}</p>
+              <p><span class="label">Remarks:</span> ${record.remarks}</p>
+              <p><span class="label">Final Status:</span> ${record.final_status}</p>
+            `;
+            container.appendChild(card);
           });
         } else {
           document.getElementById("errorMsg").textContent = "No breakdown records found for this vehicle.";
