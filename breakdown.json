@@ -1,0 +1,202 @@
+[
+  {
+    "vehicle_id": "CR-11",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/23/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Hydrolic Oil Leakage",
+    "vehicle_out_date": "7/24/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "FB-3",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/24/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Vaccum Leakage",
+    "vehicle_out_date": "7/24/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "SK-69",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/21/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Lever cut and General Check up",
+    "vehicle_out_date": "7/24/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "TU-73",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/24/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Diesel Tank leakage",
+    "vehicle_out_date": "7/24/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "SK-64",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/20/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Boom Rectification",
+    "vehicle_out_date": "7/24/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "B-30",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/24/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Head light not working",
+    "vehicle_out_date": "7/24/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "SK-41",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Track motor hose pipe damage",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "A-5",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Wiring Short",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "B-1",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Steering and clutch problem",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "SV-1",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Radiator leakage,fan cut and Dynamo problem",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "DT-49",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Fan assembly and Radiator Problem",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "B-23",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Dynamo Problem",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "DT-45",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Starting problem",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "SK-34",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Starting problem",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "SK-45",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Low Hydrolic oil",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "SPT-6",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Vaccum Leakage",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "T-19",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Tyre Puncture",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "EX-10",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Fan Belt cut",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "DT-48",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Head light and brake problem",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "L-38",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Coolant leakage arrested",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
+  }
+]
