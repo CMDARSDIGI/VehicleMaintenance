@@ -4,64 +4,18 @@
   <meta charset="UTF-8">
   <title>Vehicle Details</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      padding: 40px;
-    }
-    .container {
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 800px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    .vehicle {
-      margin-top: 30px;
-    }
-    .vehicle h2 {
-      color: #007BFF;
-    }
-    .vehicle dl {
-      display: grid;
-      grid-template-columns: max-content auto;
-      row-gap: 10px;
-      column-gap: 20px;
-    }
-    .vehicle dt {
-      font-weight: bold;
-      color: #555;
-    }
-    .vehicle dd {
-      margin: 0;
-      color: #333;
-    }
-    .error {
-      color: red;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .buttons {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 10px 20px;
-      background-color: #007BFF;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .buttons a:hover {
-      background-color: #0056b3;
-    }
+    body { font-family: Arial, sans-serif; background-color: #f2f2f2; padding: 40px; }
+    .container { background-color: #fff; padding: 30px; border-radius: 10px; max-width: 800px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; color: #333; }
+    .vehicle { margin-top: 30px; }
+    .vehicle h2 { color: #007BFF; }
+    .vehicle dl { display: grid; grid-template-columns: max-content auto; row-gap: 10px; column-gap: 20px; }
+    .vehicle dt { font-weight: bold; color: #555; }
+    .vehicle dd { margin: 0; color: #333; }
+    .error { color: red; text-align: center; margin-top: 20px; }
+    .buttons { text-align: center; margin-top: 40px; }
+    .buttons a { display: inline-block; margin: 0 10px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px; }
+    .buttons a:hover { background-color: #0056b3; }
   </style>
 </head>
 <body>
@@ -74,19 +28,16 @@
       <a href="maintenance.html">Maintenance</a>
     </div>
   </div>
-
   <script>
     const regNumber = localStorage.getItem("searchRegNumber")?.trim().toUpperCase();
     const vehicleId = localStorage.getItem("searchVehicleId")?.trim().toUpperCase();
-
-    fetch("vehicles.json")
+    fetch("vehicle.json")
       .then(response => response.json())
       .then(data => {
         const vehicle = data.find(v =>
           (vehicleId && v.vehicle_id.toUpperCase() === vehicleId) ||
           (regNumber && v.registration_number.toUpperCase() === regNumber)
         );
-
         if (vehicle) {
           const details = `
             <h2>${vehicle.make} ${vehicle.model} (${vehicle.variant})</h2>
