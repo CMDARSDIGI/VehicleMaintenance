@@ -198,5 +198,15 @@
     "vehicle_out_date": "7/25/2025",
     "remarks": "Rectified",
     "final_status": "COMPLETED"
+  },
+  {
+    "vehicle_id": "JSW001",
+    "maintenance_type": "BREAKDOWN",
+    "vehicle_in_date": "7/25/2025",
+    "job_status": "COMPLETED",
+    "issues_found": "Coolant leakage arrested",
+    "vehicle_out_date": "7/25/2025",
+    "remarks": "Rectified",
+    "final_status": "COMPLETED"
   }
 ]
